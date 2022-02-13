@@ -1,10 +1,4 @@
-// Question 1
-const getRemainder = (a, b) => {
-  return a % b;
-};
-
-// Question 2
-const url = "https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-rating&key=f5a00b2306a9486f99a67272cfdd7b1f";
+const url = "https://api.rawg.io/api/games?dates=2019-01-01,2019-12-31&ordering=-rating&key=f5a00b2306a9486f99a67272cfdd7b1fx";
 
 const resultsContainer = document.querySelector(".results");
 
@@ -38,3 +32,8 @@ async function getData() {
 }
 
 getData();
+
+// Would normally put this in a "components" folder, but assignment asked for otherwise
+function errorMessage(message) {
+  return `<div class="error">${message}</div>`;
+}
